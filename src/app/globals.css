@@ -1,17 +1,20 @@
 @import "tailwindcss";
 
 @layer base {
+  /* Theme: Nordic Frost Slate (PRO-06) */
   :root {
-    --base-dark: #0a0a0a;
-    --base-card: #121212;
-    --accent-cyan: #00F0FF;
-    --accent-violet: #8A2BE2;
-    --neutral-border: #222222;
+    --base-dark: #0B1320;
+    --base-card: #111D30;
+    --accent-cyan: #38BDF8;
+    --accent-violet: #0284C7;
+    --neutral-border: #1C2E4A;
+    --text-main: #E2E8F0;
+    --text-muted: #7E92AB;
   }
 
   body {
     background-color: var(--base-dark);
-    color: #e5e5e5;
+    color: var(--text-main);
     font-family: var(--font-rajdhani), 'Rajdhani', sans-serif;
     overflow-x: hidden;
   }
@@ -23,14 +26,14 @@
 
 /* Glassmorphism Surface Utility */
 .glass-panel {
-  background: rgba(18, 18, 18, 0.75);
+  background: rgba(17, 29, 48, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.15);
 }
 
 .glass-card {
-  background: rgba(18, 18, 18, 0.6);
+  background: rgba(17, 29, 48, 0.65);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--neutral-border);
@@ -38,22 +41,22 @@
 }
 
 .glass-card:hover {
-  border-color: rgba(0, 240, 255, 0.4);
-  box-shadow: 0 0 25px rgba(0, 240, 255, 0.15);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.12);
   transform: translateY(-2px);
 }
 
 /* Neon Glows & Accents */
 .text-glow-cyan {
-  text-shadow: 0 0 12px rgba(0, 240, 255, 0.6), 0 0 24px rgba(0, 240, 255, 0.3);
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.6), 0 0 24px rgba(56, 189, 248, 0.3);
 }
 
 .text-glow-violet {
-  text-shadow: 0 0 12px rgba(138, 43, 226, 0.6), 0 0 24px rgba(138, 43, 226, 0.3);
+  text-shadow: 0 0 12px rgba(2, 132, 199, 0.6), 0 0 24px rgba(2, 132, 199, 0.3);
 }
 
 .border-glow-cyan {
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
 }
 
 /* Custom Scrollbar */
@@ -62,24 +65,24 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #0B1320;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #222222;
+  background: #1C2E4A;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00F0FF;
+  background: #38BDF8;
 }
 
-/* Carbon Background Grid Effect */
+/* Nordic Frost Slate Background Grid Effect */
 .bg-carbon-grid {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(56, 189, 248, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.035) 1px, transparent 1px);
 }
 
 /* Terminal Scanline animation */

@@ -6,7 +6,7 @@ export interface SkillCategory {
 export const skillsData: SkillCategory[] = [
   {
     categoryName: "Programming Languages",
-    skills: ["Python", "C", "HTML", "CSS"],
+    skills: ["Python", "C", "C++", "Java", "HTML", "CSS"],
   },
   {
     categoryName: "Frameworks & Libraries",
@@ -24,16 +24,22 @@ export const skillsData: SkillCategory[] = [
     categoryName: "Tools & Platforms",
     skills: [
       "MySQL",
-      "AutoCAD",
+      "MS Excel",
       "Jupyter Notebook",
       "Tableau",
       "Git / GitHub",
-      "skills.sh",
-      "MCPs (Stitch, 21stdev/magic)",
+      "RStudio",
+      "AutoCAD",
+      "MCPs (stitch, 21stdev/magic)",
     ],
   },
   {
     categoryName: "Soft Skills",
-    skills: ["Team Player", "Time Management", "Problem Solving"],
+    skills: [
+      "Analytical Thinking",
+      "Team Player",
+      "Time Management",
+      "Problem Solving",
+    ],
   },
 ];

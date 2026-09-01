@@ -38,7 +38,7 @@ export default function EducationTimeline() {
     );
 
   return (
-    <section id="education" className="py-24 relative bg-[#0a0a0a] bg-carbon-grid min-h-screen">
+    <section id="education" className="py-24 relative bg-[#0B1320] bg-carbon-grid min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
@@ -46,11 +46,11 @@ export default function EducationTimeline() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-3xl sm:text-5xl font-orbitron font-extrabold text-white tracking-tight"
+            className="text-3xl sm:text-5xl font-orbitron font-extrabold text-[#E2E8F0] tracking-tight"
           >
-            ACADEMIC <span className="text-[#00F0FF]">RECORDS</span>
+            ACADEMIC <span className="text-[#38BDF8]">RECORDS</span>
           </motion.h1>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#00F0FF] to-[#8A2BE2] mx-auto mt-4 rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-[#38BDF8] to-[#0284C7] mx-auto mt-4 rounded-full" />
         </div>
 
         {/* Education Entries Stack */}
@@ -61,32 +61,32 @@ export default function EducationTimeline() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.15 }}
-              className="glass-card p-6 sm:p-8 rounded-3xl relative overflow-hidden border border-[#222222]"
+              className="glass-card p-6 sm:p-8 rounded-3xl relative overflow-hidden border border-[#1C2E4A]"
             >
               {/* Header Info */}
               <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
                 <div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00F0FF]/10 border border-[#00F0FF]/30 text-xs font-mono text-[#00F0FF] mb-3">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#38BDF8]/10 border border-[#38BDF8]/30 text-xs font-mono text-[#38BDF8] mb-3">
                     <Calendar className="w-3.5 h-3.5" />
                     <span>{item.timeline}</span>
                   </div>
 
-                  <h2 className="text-2xl sm:text-3xl font-orbitron font-bold text-white">
+                  <h2 className="text-2xl sm:text-3xl font-orbitron font-bold text-[#E2E8F0]">
                     {item.degreeName}
                   </h2>
 
-                  <div className="flex flex-wrap items-center gap-3 text-sm text-gray-400 mt-2 font-mono">
+                  <div className="flex flex-wrap items-center gap-3 text-sm text-[#7E92AB] mt-2 font-mono">
                     <div className="flex items-center gap-1.5">
-                      <Building className="w-4 h-4 text-[#8A2BE2]" />
+                      <Building className="w-4 h-4 text-[#0284C7]" />
                       <span>{item.institution}</span>
                     </div>
                     {item.board && (
-                      <span className="text-xs bg-[#121212] px-2.5 py-1 rounded-md border border-[#222222] text-gray-300">
+                      <span className="text-xs bg-[#111D30] px-2.5 py-1 rounded-md border border-[#1C2E4A] text-slate-300">
                         {item.board}
                       </span>
                     )}
                     {item.rollNo && (
-                      <span className="text-xs bg-[#121212] px-2.5 py-1 rounded-md border border-[#222222] text-cyan-300">
+                      <span className="text-xs bg-[#111D30] px-2.5 py-1 rounded-md border border-[#1C2E4A] text-sky-300">
                         Roll: {item.rollNo}
                       </span>
                     )}
@@ -95,11 +95,11 @@ export default function EducationTimeline() {
 
                 {/* Grade + Marksheet Button */}
                 <div className="flex flex-col items-end gap-3 self-start shrink-0">
-                  <div className="px-5 py-3 rounded-2xl bg-gradient-to-br from-[#00F0FF]/15 to-[#8A2BE2]/15 border border-[#00F0FF]/40 text-right">
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-gray-400 block">
+                  <div className="px-5 py-3 rounded-2xl bg-gradient-to-br from-[#38BDF8]/15 to-[#0284C7]/15 border border-[#38BDF8]/40 text-right">
+                    <span className="text-[11px] font-mono uppercase tracking-wider text-[#7E92AB] block">
                       {item.gradeLabel}
                     </span>
-                    <span className="text-2xl sm:text-3xl font-orbitron font-extrabold text-[#00F0FF]">
+                    <span className="text-2xl sm:text-3xl font-orbitron font-extrabold text-[#38BDF8]">
                       {item.gradeValue}
                     </span>
                   </div>
@@ -107,9 +107,9 @@ export default function EducationTimeline() {
                   {item.marksheetImages && item.marksheetImages.length > 0 && (
                     <button
                       onClick={() => openMarksheet(item.degreeName, item.marksheetImages!)}
-                      className="px-4 py-2 rounded-xl bg-gradient-to-r from-[#00F0FF]/20 to-[#8A2BE2]/20 border border-[#00F0FF]/50 text-xs font-mono font-bold text-white hover:text-[#00F0FF] hover:border-[#00F0FF] transition-all flex items-center gap-2 cursor-pointer shadow-[0_0_15px_rgba(0,240,255,0.15)]"
+                      className="px-4 py-2 rounded-xl bg-gradient-to-r from-[#38BDF8]/20 to-[#0284C7]/20 border border-[#38BDF8]/50 text-xs font-mono font-bold text-white hover:text-[#38BDF8] hover:border-[#38BDF8] transition-all flex items-center gap-2 cursor-pointer shadow-[0_0_15px_rgba(56,189,248,0.12)]"
                     >
-                      <FileText className="w-4 h-4 text-[#00F0FF]" />
+                      <FileText className="w-4 h-4 text-[#38BDF8]" />
                       <span>View Official Marksheet</span>
                     </button>
                   )}
@@ -118,10 +118,10 @@ export default function EducationTimeline() {
 
               {/* B.Tech Semester Breakdown */}
               {item.btechSemesters && (
-                <div className="pt-6 border-t border-[#222222]">
+                <div className="pt-6 border-t border-[#1C2E4A]">
                   <div className="flex items-center gap-2 mb-4">
-                    <BookOpen className="w-4 h-4 text-[#00F0FF]" />
-                    <h3 className="font-orbitron font-semibold text-white text-sm">
+                    <BookOpen className="w-4 h-4 text-[#38BDF8]" />
+                    <h3 className="font-orbitron font-semibold text-[#E2E8F0] text-sm">
                       Semester Performance Breakdown (TGPA Records)
                     </h3>
                   </div>
@@ -134,8 +134,8 @@ export default function EducationTimeline() {
                         onClick={() => setActiveSemTab(sem.semester)}
                         className={`px-4 py-2 rounded-xl text-xs font-orbitron transition-all cursor-pointer ${
                           activeSemTab === sem.semester
-                            ? "bg-gradient-to-r from-[#00F0FF] to-[#8A2BE2] text-black font-bold shadow-[0_0_15px_rgba(0,240,255,0.3)]"
-                            : "bg-[#121212] border border-[#222222] text-gray-400 hover:text-white"
+                            ? "bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-bold shadow-[0_0_15px_rgba(56,189,248,0.25)]"
+                            : "bg-[#111D30] border border-[#1C2E4A] text-slate-400 hover:text-white"
                         }`}
                       >
                         {sem.semester} · {sem.tgpa}
@@ -149,17 +149,17 @@ export default function EducationTimeline() {
                       ?.courses.map((course) => (
                         <div
                           key={course.code}
-                          className="p-3.5 rounded-xl bg-[#0a0a0a] border border-[#222222] flex items-center justify-between gap-2 hover:border-[#00F0FF]/30 transition-all"
+                          className="p-3.5 rounded-xl bg-[#0B1320] border border-[#1C2E4A] flex items-center justify-between gap-2 hover:border-[#38BDF8]/30 transition-all"
                         >
                           <div>
-                            <span className="text-[10px] font-mono text-[#00F0FF] block">
+                            <span className="text-[10px] font-mono text-[#38BDF8] block">
                               {course.code}
                             </span>
-                            <span className="text-xs font-semibold text-gray-200 line-clamp-1">
+                            <span className="text-xs font-semibold text-slate-200 line-clamp-1">
                               {course.title}
                             </span>
                           </div>
-                          <span className="text-xs font-mono font-bold text-cyan-300 bg-[#121212] px-2 py-0.5 rounded border border-[#222222] shrink-0">
+                          <span className="text-xs font-mono font-bold text-sky-300 bg-[#111D30] px-2 py-0.5 rounded border border-[#1C2E4A] shrink-0">
                             {course.grade}
                           </span>
                         </div>
@@ -170,10 +170,10 @@ export default function EducationTimeline() {
 
               {/* CBSE Subject Marksheet Table */}
               {item.subjectMarks && (
-                <div className="pt-6 border-t border-[#222222]">
+                <div className="pt-6 border-t border-[#1C2E4A]">
                   <div className="flex items-center gap-2 mb-4">
-                    <FileSpreadsheet className="w-4 h-4 text-[#8A2BE2]" />
-                    <h3 className="font-orbitron font-semibold text-white text-sm">
+                    <FileSpreadsheet className="w-4 h-4 text-[#0284C7]" />
+                    <h3 className="font-orbitron font-semibold text-[#E2E8F0] text-sm">
                       Subject-wise Performance
                     </h3>
                   </div>
@@ -182,24 +182,24 @@ export default function EducationTimeline() {
                     {item.subjectMarks.map((sub) => (
                       <div
                         key={sub.subjectName}
-                        className="p-3.5 rounded-xl bg-[#0a0a0a] border border-[#222222] flex items-center justify-between gap-3 hover:border-[#8A2BE2]/40 transition-all"
+                        className="p-3.5 rounded-xl bg-[#0B1320] border border-[#1C2E4A] flex items-center justify-between gap-3 hover:border-[#0284C7]/40 transition-all"
                       >
                         <div>
                           {sub.code && (
-                            <span className="text-[10px] font-mono text-[#8A2BE2] block">
+                            <span className="text-[10px] font-mono text-[#0284C7] block">
                               CODE: {sub.code}
                             </span>
                           )}
-                          <span className="text-xs font-semibold text-gray-200 block">
+                          <span className="text-xs font-semibold text-slate-200 block">
                             {sub.subjectName}
                           </span>
                         </div>
                         <div className="text-right shrink-0">
-                          <span className="text-sm font-orbitron font-bold text-[#00F0FF] block">
+                          <span className="text-sm font-orbitron font-bold text-[#38BDF8] block">
                             {sub.marksObtained}/{sub.totalMarks}
                           </span>
                           {sub.grade && (
-                            <span className="text-[10px] font-mono text-gray-400 block">
+                            <span className="text-[10px] font-mono text-[#7E92AB] block">
                               {sub.grade}
                             </span>
                           )}
@@ -223,32 +223,32 @@ export default function EducationTimeline() {
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="relative max-w-3xl w-full bg-[#0f0f0f] rounded-3xl border border-[#00F0FF]/40 overflow-hidden shadow-[0_0_60px_rgba(0,240,255,0.15)]"
+            className="relative max-w-3xl w-full bg-[#111D30] rounded-3xl border border-[#38BDF8]/40 overflow-hidden shadow-[0_0_60px_rgba(56,189,248,0.12)]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-[#222222]">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-[#1C2E4A]">
               <div className="flex items-center gap-2">
-                <FileText className="w-5 h-5 text-[#00F0FF]" />
+                <FileText className="w-5 h-5 text-[#38BDF8]" />
                 <span className="font-orbitron font-bold text-white text-sm">
                   {selectedMarksheet.title} — Official Marksheet
                 </span>
                 {selectedMarksheet.images.length > 1 && (
-                  <span className="text-xs font-mono text-gray-400 ml-2">
+                  <span className="text-xs font-mono text-[#7E92AB] ml-2">
                     Page {selectedMarksheet.page + 1} of {selectedMarksheet.images.length}
                   </span>
                 )}
               </div>
               <button
                 onClick={closeMarksheet}
-                className="p-2 rounded-full bg-[#121212] border border-[#222222] text-gray-300 hover:text-white hover:border-[#00F0FF] transition-all"
+                className="p-2 rounded-full bg-[#111D30] border border-[#1C2E4A] text-slate-300 hover:text-white hover:border-[#38BDF8] transition-all"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
             {/* Image Display */}
-            <div className="relative w-full bg-[#121212]" style={{ minHeight: "70vh" }}>
+            <div className="relative w-full bg-[#111D30]" style={{ minHeight: "70vh" }}>
               <Image
                 src={selectedMarksheet.images[selectedMarksheet.page]}
                 alt={`${selectedMarksheet.title} marksheet page ${selectedMarksheet.page + 1}`}
@@ -259,13 +259,13 @@ export default function EducationTimeline() {
               />
             </div>
 
-            {/* Page Navigation (only if multiple pages) */}
+            {/* Page Navigation */}
             {selectedMarksheet.images.length > 1 && (
-              <div className="flex items-center justify-between px-6 py-4 border-t border-[#222222] bg-[#0f0f0f]">
+              <div className="flex items-center justify-between px-6 py-4 border-t border-[#1C2E4A] bg-[#111D30]">
                 <button
                   onClick={prevPage}
                   disabled={selectedMarksheet.page === 0}
-                  className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-orbitron font-bold border border-[#222222] text-gray-300 disabled:opacity-30 hover:border-[#00F0FF] hover:text-[#00F0FF] transition-all cursor-pointer disabled:cursor-not-allowed"
+                  className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-orbitron font-bold border border-[#1C2E4A] text-slate-300 disabled:opacity-30 hover:border-[#38BDF8] hover:text-[#38BDF8] transition-all cursor-pointer disabled:cursor-not-allowed"
                 >
                   <ChevronLeft className="w-4 h-4" />
                   Previous Page
@@ -277,8 +277,8 @@ export default function EducationTimeline() {
                       onClick={() => setSelectedMarksheet((s) => s ? { ...s, page: i } : s)}
                       className={`w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${
                         i === selectedMarksheet.page
-                          ? "bg-[#00F0FF] shadow-[0_0_8px_rgba(0,240,255,0.6)]"
-                          : "bg-[#333]"
+                          ? "bg-[#38BDF8] shadow-[0_0_8px_rgba(56,189,248,0.6)]"
+                          : "bg-[#1C2E4A]"
                       }`}
                     />
                   ))}
@@ -286,7 +286,7 @@ export default function EducationTimeline() {
                 <button
                   onClick={nextPage}
                   disabled={selectedMarksheet.page === selectedMarksheet.images.length - 1}
-                  className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-orbitron font-bold border border-[#222222] text-gray-300 disabled:opacity-30 hover:border-[#00F0FF] hover:text-[#00F0FF] transition-all cursor-pointer disabled:cursor-not-allowed"
+                  className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-orbitron font-bold border border-[#1C2E4A] text-slate-300 disabled:opacity-30 hover:border-[#38BDF8] hover:text-[#38BDF8] transition-all cursor-pointer disabled:cursor-not-allowed"
                 >
                   Next Page
                   <ChevronRight className="w-4 h-4" />

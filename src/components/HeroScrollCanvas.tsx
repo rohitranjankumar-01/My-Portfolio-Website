@@ -62,7 +62,7 @@ export default function HeroScrollCanvas() {
           vx: (Math.random() - 0.5) * 0.4,
           vy: (Math.random() - 0.5) * 0.4,
           size: Math.random() * 2 + 1,
-          color: Math.random() > 0.5 ? "#00F0FF" : "#8A2BE2",
+          color: Math.random() > 0.5 ? "#38BDF8" : "#0284C7",
           alpha: Math.random() * 0.5 + 0.2,
         });
       }
@@ -137,23 +137,12 @@ export default function HeroScrollCanvas() {
       />
 
       {/* Radial Gradient Ambient Glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#00F0FF]/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-10 w-[450px] h-[450px] bg-[#8A2BE2]/15 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#38BDF8]/8 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-10 w-[450px] h-[450px] bg-[#0284C7]/12 rounded-full blur-[160px] pointer-events-none" />
 
       {/* Hero Content Container */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
         
-        {/* Status Chip */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel border border-[#00F0FF]/30 text-xs font-mono tracking-widest uppercase text-[#00F0FF] mb-6 shadow-[0_0_20px_rgba(0,240,255,0.2)]"
-        >
-          <span className="w-2 h-2 rounded-full bg-[#00F0FF] animate-pulse" />
-          <span>Available for Engineering & AI Roles</span>
-          <Sparkles className="w-3.5 h-3.5 text-[#00F0FF]" />
-        </motion.div>
 
         {/* Main Name Heading */}
         <motion.h1
@@ -162,17 +151,17 @@ export default function HeroScrollCanvas() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-4xl sm:text-6xl md:text-7xl font-orbitron font-extrabold tracking-tight text-white mb-4 leading-tight"
         >
-          ROHIT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F0FF] via-cyan-300 to-[#8A2BE2] text-glow-cyan">RANJAN KUMAR</span>
+          ROHIT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#38BDF8] via-sky-200 to-[#0284C7] text-glow-cyan">RANJAN KUMAR</span>
         </motion.h1>
 
-        {/* Dynamic Tagline (Measured via Pretext Hook) */}
+        {/* Dynamic Tagline */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="max-w-2xl text-lg sm:text-xl font-rajdhani font-semibold text-cyan-300/90 mb-6 flex items-center justify-center gap-2 flex-wrap"
+          className="max-w-2xl text-lg sm:text-xl font-rajdhani font-semibold text-sky-200/90 mb-6 flex items-center justify-center gap-2 flex-wrap"
         >
-          <Terminal className="w-5 h-5 text-[#00F0FF]" />
+          <Terminal className="w-5 h-5 text-[#38BDF8]" />
           <span>{personalData.tagline}</span>
         </motion.div>
 
@@ -181,7 +170,7 @@ export default function HeroScrollCanvas() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="max-w-3xl text-sm sm:text-base text-gray-400 font-normal leading-relaxed mb-10"
+          className="max-w-3xl text-sm sm:text-base text-[#7E92AB] font-normal leading-relaxed mb-10"
         >
           {personalData.shortBio}
         </motion.p>
@@ -195,14 +184,14 @@ export default function HeroScrollCanvas() {
         >
           <Link
             href="/projects"
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#00F0FF] to-[#8A2BE2] text-black font-orbitron font-bold text-xs uppercase tracking-wider hover:opacity-90 transition-all shadow-[0_0_25px_rgba(0,240,255,0.4)] flex items-center gap-2"
+            className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-orbitron font-bold text-xs uppercase tracking-wider hover:opacity-90 transition-all shadow-[0_0_25px_rgba(56,189,248,0.3)] flex items-center gap-2"
           >
             <span>Explore Projects</span>
             <ChevronRight className="w-4 h-4" />
           </Link>
           <Link
             href="/certifications"
-            className="px-6 py-3 rounded-xl glass-panel border border-[#222222] text-white hover:border-[#00F0FF]/60 hover:text-[#00F0FF] font-orbitron font-semibold text-xs uppercase tracking-wider transition-all"
+            className="px-6 py-3 rounded-xl glass-panel border border-[#1C2E4A] text-white hover:border-[#38BDF8]/60 hover:text-[#38BDF8] font-orbitron font-semibold text-xs uppercase tracking-wider transition-all"
           >
             View Certifications
           </Link>
@@ -217,10 +206,10 @@ export default function HeroScrollCanvas() {
         >
           <Link
             href="/education"
-            className="flex flex-col items-center gap-2 text-xs font-mono text-gray-500 hover:text-[#00F0FF] transition-colors"
+            className="flex flex-col items-center gap-2 text-xs font-mono text-slate-500 hover:text-[#38BDF8] transition-colors"
           >
             <span>EXPLORE ACADEMICS</span>
-            <ArrowDown className="w-4 h-4 animate-bounce text-[#00F0FF]" />
+            <ArrowDown className="w-4 h-4 animate-bounce text-[#38BDF8]" />
           </Link>
         </motion.div>
 

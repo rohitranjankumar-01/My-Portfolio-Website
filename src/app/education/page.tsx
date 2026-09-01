@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function EducationPage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white pt-16">
+    <main className="min-h-screen bg-[#0B1320] text-[#E2E8F0] pt-16">
       <Navbar />
       <EducationTimeline />
       <SimpleFooter />

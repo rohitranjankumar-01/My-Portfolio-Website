@@ -25,6 +25,15 @@ export const certificationsData: CertificationEntry[] = [
     isProctored: true,
   },
   {
+    id: "cert-dbms",
+    title: "Database Management System Part 1",
+    issuer: "Infosys Springboard",
+    date: "August 2026",
+    category: "Certificates",
+    imagePath: "/Image/DBMS.jpg",
+    isProctored: false,
+  },
+  {
     id: "cert-2",
     title: "Programming in Java",
     issuer: "Lovely Professional University / iamneo",
