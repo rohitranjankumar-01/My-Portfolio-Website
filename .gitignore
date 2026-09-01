@@ -14,9 +14,10 @@
 # production
 /build
 
-# misc
+# misc & OS
 .DS_Store
 *.pem
+Thumbs.db
 
 # debug
 npm-debug.log*
@@ -33,7 +34,13 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# temp / artifacts / zips
+# temp / artifacts / scripts / internal notes
 Portfolio-Deploy.zip
+Portfolio-Source.zip
+*.ps1
+portfolio_details.txt
+Prompt.txt
+THEME_PALETTES.md
+theme-library.html
 theme-catalog/
 *.log

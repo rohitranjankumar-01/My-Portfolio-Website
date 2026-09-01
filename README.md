@@ -1,150 +1,132 @@
 # Rohit Ranjan Kumar — Portfolio Website
 
-A high-performance, multi-page personal portfolio built with **Next.js 15**, **TypeScript**, **Framer Motion**, and **Tailwind CSS**. Designed with a dark glassmorphism aesthetic, smooth animations, and a recruiter-first information architecture.
+A high-performance, multi-page personal portfolio engineered with **Next.js 15**, **TypeScript**, **Framer Motion**, and **Tailwind CSS**. Designed with the **Nordic Frost Slate** design system, interactive HUD interfaces, and a recruiter-first information architecture.
 
 ---
 
-## 🌐 Live Pages
+## 🌐 Site Overview & Portals
 
-| Route | Description |
-|-------|-------------|
-| `/` | Hero landing page — name, tagline, CTA |
-| `/education` | Academic records with CGPA, TGPA per semester, subject marks & official marksheet viewer |
-| `/experience` | Work experience timeline |
-| `/projects` | Full-screen project showcase with live launch / GitHub repo cards |
-| `/certifications` | Certifications, proctored exams, hackathons & soft skill badges |
-| `/skills` | Interactive skills HUD with category filters |
-| `/contact` | Contact form & social links |
+| Route | Portal | Description |
+|---|---|---|
+| `/` | **Home / Hero** | Dynamic particle canvas, executive profile tagline, portal quick-nav cards |
+| `/education` | **Academics** | Academic timeline (B.Tech, 12th, 10th), CGPA/marks breakdown, and high-res verified marksheet lightbox viewer |
+| `/experience` | **Work Experience** | Professional & self-driven roles, leadership achievements, and operational milestones |
+| `/internship-training` | **Internship & Training** | Subdivision for industrial internships and university specialized training (AI Engineer Launchpad) with completion proof |
+| `/projects` | **Project Matrix** | Domain-categorized projects across Full-Stack, AI/NLP, Data Science, and Systems with live demos & sandbox preview |
+| `/certifications` | **Certifications** | Proctored certifications (Oracle OCI, Java, DSA, OOP, DBMS), hackathons, and soft-skill credentials |
+| `/skills` | **Skills HUD** | Interactive developer capability terminal with categorized modules |
+| `/resume` | **CV / Resume** | Official document status portal with direct inquiry actions |
+| `/contact` | **Contact** | Interactive transmission form, quick one-click clipboard copy for email/phone, and social hubs |
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Framework** — [Next.js 15](https://nextjs.org/) (App Router, Static Export)
-- **Language** — TypeScript
-- **Styling** — Tailwind CSS + custom CSS (glassmorphism, glow effects)
+- **Framework** — [Next.js 15](https://nextjs.org/) (App Router, Static Generation)
+- **Language** — TypeScript (Strict Type Checking)
+- **Styling** — Tailwind CSS + Custom CSS Variables
 - **Animations** — [Framer Motion](https://www.framer.com/motion/)
 - **Icons** — [Lucide React](https://lucide.dev/)
-- **Images** — Next.js `<Image>` with WebP/AVIF optimization
-- **Canvas** — Custom particle animation on hero
+- **Image Optimization** — Next.js `<Image>` with AVIF / WebP pipeline
+- **Hosting** — [Vercel](https://vercel.com/) (Global Edge CDN, Automatic CI/CD)
 
 ---
 
 ## 📁 Project Structure
 
 ```
-src/
-├── app/                  # Next.js App Router pages
-│   ├── page.tsx          # Home / Hero
-│   ├── education/
-│   ├── experience/
-│   ├── projects/
-│   ├── certifications/
-│   ├── skills/
-│   └── contact/
-├── components/           # Reusable UI components
-│   ├── Navbar.tsx
-│   ├── HeroScrollCanvas.tsx
-│   ├── EducationTimeline.tsx
-│   ├── ExperienceSection.tsx
-│   ├── ModularProjectGrid.tsx
-│   ├── ProjectLiveFrame.tsx
-│   ├── CertificationsGrid.tsx
-│   ├── SkillsHud.tsx
-│   ├── FooterContact.tsx
-│   └── SimpleFooter.tsx
-├── data/                 # All content data (edit here to update site)
-│   ├── personalData.ts
-│   ├── educationData.ts
-│   ├── experienceData.ts
-│   ├── projectsData.ts
-│   ├── certificationsData.ts
-│   └── skillsData.ts
-└── hooks/
-    └── useTextMetrics.ts
-
-public/
-└── Image/                # Certification images, marksheet JPEGs
+My-Portfolio-Website/
+├── public/
+│   └── Image/                 # Verified credentials & marksheet images
+├── src/
+│   ├── app/                   # Next.js App Router routes
+│   │   ├── page.tsx           # Home portal
+│   │   ├── education/
+│   │   ├── experience/
+│   │   ├── internship-training/
+│   │   ├── projects/
+│   │   ├── certifications/
+│   │   ├── skills/
+│   │   ├── resume/
+│   │   ├── contact/
+│   │   ├── globals.css        # Theme variables & carbon grid
+│   │   └── layout.tsx
+│   ├── components/            # Interactive UI components
+│   │   ├── Navbar.tsx
+│   │   ├── HeroScrollCanvas.tsx
+│   │   ├── EducationTimeline.tsx
+│   │   ├── ExperienceSection.tsx
+│   │   ├── InternshipTrainingSection.tsx
+│   │   ├── ModularProjectGrid.tsx
+│   │   ├── ProjectLiveFrame.tsx
+│   │   ├── ProjectSandboxTerminal.tsx
+│   │   ├── CertificationsGrid.tsx
+│   │   ├── SkillsHud.tsx
+│   │   ├── ResumeSection.tsx
+│   │   ├── FooterContact.tsx
+│   │   └── SimpleFooter.tsx
+│   ├── data/                  # Decoupled content data layers
+│   │   ├── personalData.ts
+│   │   ├── educationData.ts
+│   │   ├── experienceData.ts
+│   │   ├── internshipTrainingData.ts
+│   │   ├── projectsData.ts
+│   │   ├── certificationsData.ts
+│   │   ├── skillsData.ts
+│   │   └── resumeData.ts
+│   └── hooks/
+│       └── useTextMetrics.ts
+├── next.config.ts
+├── package.json
+└── tsconfig.json
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🎨 Design System — Nordic Frost Slate
 
-### Prerequisites
-- Node.js 18+
-- npm
+- **Base Dark (Background)** — `#0B1320`
+- **Base Card (Panels)** — `#111D30`
+- **Accent Cyan (Primary)** — `#38BDF8`
+- **Accent Blue (Secondary)** — `#0284C7`
+- **Neutral Border** — `#1C2E4A`
+- **Text Main** — `#E2E8F0`
+- **Text Muted** — `#7E92AB`
 
-### Install & Run
+---
 
+## 🚀 Local Development
+
+### 1. Clone the repository
 ```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
+git clone https://github.com/rohitranjankumar-01/My-Portfolio-Website.git
+cd My-Portfolio-Website
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-### Production Build
+### 3. Run development server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) to view in browser.
 
+### 4. Build for production
 ```bash
 npm run build
 ```
 
 ---
 
-## 📦 Export Scripts
-
-Two PowerShell scripts are included for packaging the project:
-
-### Source Code Export
-```powershell
-.\export-source.ps1
-```
-Collects `src/`, `public/`, and all config files → **`Portfolio-Source.zip`**
-
-### Deployment Export
-```powershell
-.\export-deploy.ps1
-```
-Same as source export but labeled for deployment → **`Portfolio-Deploy.zip`**
-
-> **Note:** Neither script includes `node_modules/` or `.next/` — deployment platforms (Vercel, Netlify) generate these automatically from source.
-
----
-
-## ✏️ Updating Content
-
-All site content is in `src/data/`. No JSX edits needed for most updates:
-
-| File | What to edit |
-|------|-------------|
-| `personalData.ts` | Name, tagline, email, social links |
-| `educationData.ts` | Degrees, grades, semester marks, marksheet images |
-| `experienceData.ts` | Work experience entries |
-| `projectsData.ts` | Projects, GitHub URLs, live URLs, tech stack |
-| `certificationsData.ts` | Certifications, images, dates |
-| `skillsData.ts` | Skills with proficiency levels |
-
----
-
-## 🎨 Design System
-
-- **Background** — `#0a0a0a` carbon dark
-- **Accent Cyan** — `#00F0FF`
-- **Accent Purple** — `#8A2BE2`
-- **Fonts** — Orbitron (headings), Rajdhani (body), JetBrains Mono (code)
-- **Cards** — Glassmorphism with `backdrop-blur` and `rgba` borders
-
----
-
 ## 👤 Author
 
-**Rohit Ranjan Kumar**
-B.Tech CSE (Data Science & Engineering) — Lovely Professional University
+**Rohit Ranjan Kumar**  
+B.Tech Computer Science and Engineering — Lovely Professional University  
+Specialization: Data Science, Data Engineering & AI Systems
 
-- GitHub: [@rohitranjankumar-01](https://github.com/rohitranjankumar-01)
-- LinkedIn: [rohit-r-kumar](https://www.linkedin.com/in/rohit-r-kumar)
-- Email: rohitkashyap3009@gmail.com
+- **GitHub:** [@rohitranjankumar-01](https://github.com/rohitranjankumar-01)
+- **LinkedIn:** [rohit-r-kumar](https://www.linkedin.com/in/rohit-r-kumar)
+- **Email:** rohitkashyap3009@gmail.com
