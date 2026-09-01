@@ -29,6 +29,12 @@ export const metadata: Metadata = {
     "Portfolio",
   ],
   authors: [{ name: personalData.fullName }],
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: `${personalData.fullName} | Portfolio`,
     description: personalData.shortBio,
