@@ -16,7 +16,12 @@ const rajdhani = Rajdhani({
   display: "swap",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://rohitranjankumar-portfolio.vercel.app");
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: `${personalData.fullName} | Portfolio`,
   description: personalData.shortBio,
   keywords: [
@@ -38,8 +43,25 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${personalData.fullName} | Portfolio`,
     description: personalData.shortBio,
+    url: "/",
+    siteName: `${personalData.fullName} Portfolio`,
+    locale: "en_US",
     type: "website",
-    url: personalData.githubUrl,
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: `${personalData.fullName} Portfolio`,
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${personalData.fullName} | Portfolio`,
+    description: personalData.shortBio,
+    images: ["/opengraph-image"],
   },
 };
 
